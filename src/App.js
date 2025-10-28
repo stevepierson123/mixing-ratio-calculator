@@ -77,46 +77,46 @@ const MixingRatioCalculator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 p-4">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 p-2 sm:p-4">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Beaker className="w-8 h-8 text-blue-400" />
-            <h1 className="text-3xl font-bold text-white">Mixing Ratio Calculator</h1>
+        <div className="text-center mb-4 sm:mb-6">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Beaker className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">Mixing Ratio Calculator</h1>
           </div>
-          <p className="text-gray-300">Perfect mixing ratios for automotive detailing products</p>
+          <p className="text-sm sm:text-base text-gray-300">Perfect mixing ratios for automotive detailing products</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           {/* Input Section */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-            <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-              <Calculator className="w-5 h-5" />
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 sm:p-6 border border-white/20">
+            <h2 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6 flex items-center gap-2">
+              <Calculator className="w-4 h-4" />
               Setup Your Mix
             </h2>
             
             {/* Ratio Input */}
-            <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-200 mb-3">
+            <div className="mb-4 sm:mb-6">
+              <label className="block text-xs sm:text-sm font-medium text-gray-200 mb-2 sm:mb-3">
                 Mixing Ratio (Product : Water)
               </label>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <input
                   type="number"
                   value={ratioA}
                   onChange={(e) => setRatioA(e.target.value)}
-                  className="w-20 px-3 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                  className="w-16 sm:w-20 px-2 sm:px-3 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm sm:text-base"
                   placeholder="1"
                   min="0"
                   step="0.1"
                 />
-                <span className="text-white text-xl font-bold">:</span>
+                <span className="text-white text-lg sm:text-xl font-bold">:</span>
                 <input
                   type="number"
                   value={ratioB}
                   onChange={(e) => setRatioB(e.target.value)}
-                  className="w-20 px-3 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                  className="w-16 sm:w-20 px-2 sm:px-3 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm sm:text-base"
                   placeholder="4"
                   min="0"
                   step="0.1"
@@ -125,8 +125,8 @@ const MixingRatioCalculator = () => {
             </div>
 
             {/* Total Volume Input */}
-            <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-200 mb-3">
+            <div className="mb-4 sm:mb-6">
+              <label className="block text-xs sm:text-sm font-medium text-gray-200 mb-2 sm:mb-3">
                 Total Volume Needed
               </label>
               <div className="flex gap-2">
@@ -134,14 +134,14 @@ const MixingRatioCalculator = () => {
                   type="number"
                   value={totalVolume}
                   onChange={(e) => setTotalVolume(e.target.value)}
-                  className="flex-1 px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-transparent text-lg"
+                  className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-transparent text-base sm:text-lg"
                   placeholder="500"
                   min="0"
                 />
                 <select
                   value={unit}
                   onChange={(e) => setUnit(e.target.value)}
-                  className="px-3 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                  className="px-2 sm:px-3 py-2 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm sm:text-base"
                   style={{color: 'white'}}
                 >
                   <option value="ml" style={{color: 'black', backgroundColor: 'white'}}>ml</option>
@@ -154,23 +154,23 @@ const MixingRatioCalculator = () => {
           </div>
 
           {/* Results Section */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-            <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-              <Droplets className="w-5 h-5" />
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 sm:p-6 border border-white/20">
+            <h2 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6 flex items-center gap-2">
+              <Droplets className="w-4 h-4" />
               Your Mix
             </h2>
 
             {/* Visual Ratio Bar */}
-            <div className="mb-6">
-              <div className="flex h-8 rounded-lg overflow-hidden bg-white/10">
+            <div className="mb-4 sm:mb-6">
+              <div className="flex h-6 sm:h-8 rounded-lg overflow-hidden bg-white/10">
                 <div 
-                  className="bg-blue-500 flex items-center justify-center text-white text-sm font-semibold"
+                  className="bg-blue-500 flex items-center justify-center text-white text-xs sm:text-sm font-semibold"
                   style={{ width: `${getPercentageA()}%` }}
                 >
                   {getPercentageA() > 15 ? `${getPercentageA()}%` : ''}
                 </div>
                 <div 
-                  className="bg-green-500 flex items-center justify-center text-white text-sm font-semibold"
+                  className="bg-green-500 flex items-center justify-center text-white text-xs sm:text-sm font-semibold"
                   style={{ width: `${getPercentageB()}%` }}
                 >
                   {getPercentageB() > 15 ? `${getPercentageB()}%` : ''}
@@ -199,7 +199,7 @@ const MixingRatioCalculator = () => {
                     <option value="gal" style={{color: 'black', backgroundColor: 'white'}}>US Gal</option>
                   </select>
                 </div>
-                <div className="text-2xl font-bold text-white">
+                <div className="text-xl sm:text-2xl font-bold text-white">
                   {convertFromMl(volumeA, productUnit)} {productUnit}
                 </div>
               </div>
@@ -221,7 +221,7 @@ const MixingRatioCalculator = () => {
                     <option value="gal" style={{color: 'black', backgroundColor: 'white'}}>US Gal</option>
                   </select>
                 </div>
-                <div className="text-2xl font-bold text-white">
+                <div className="text-xl sm:text-2xl font-bold text-white">
                   {convertFromMl(volumeB, waterUnit)} {waterUnit}
                 </div>
               </div>
@@ -229,7 +229,7 @@ const MixingRatioCalculator = () => {
               <div className="border-t border-white/20 pt-4">
                 <div className="bg-white/10 rounded-lg p-4 text-center">
                   <div className="text-gray-300 text-sm font-medium mb-1">Total Mixture</div>
-                  <div className="text-2xl font-bold text-white">
+                  <div className="text-xl sm:text-2xl font-bold text-white">
                     {totalVolume} {unit}
                   </div>
                 </div>
@@ -247,19 +247,19 @@ const MixingRatioCalculator = () => {
         </div>
 
         {/* Clear Button */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-4 sm:mt-6 md:mt-8">
           <button
             onClick={clearAll}
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-lg transition-all duration-200 font-medium"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-lg transition-all duration-200 font-medium text-sm sm:text-base"
           >
             Reset Calculator
           </button>
         </div>
 
         {/* Usage Tips */}
-        <div className="mt-8 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-          <h3 className="text-white font-semibold mb-2">💡 Detailing Tips</h3>
-          <div className="text-gray-300 text-sm space-y-1">
+        <div className="mt-4 sm:mt-6 md:mt-8 bg-white/5 backdrop-blur-lg rounded-lg p-3 sm:p-4 border border-white/10">
+          <h3 className="text-white font-semibold mb-2 text-sm sm:text-base">💡 Detailing Tips</h3>
+          <div className="text-gray-300 text-xs sm:text-sm space-y-1">
             <p>• Always add product to water, not water to product</p>
             <p>• Start with weaker ratios and increase strength as needed</p>
             <p>• Test on inconspicuous areas first</p>
